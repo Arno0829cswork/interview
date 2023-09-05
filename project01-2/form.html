@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="HTML練習" />
+    <meta property="og:type" content='website' />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="職訓局、職前訓練、HTML、PHP、跨平台設置" />
+    <meta property="og:image" content="https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo.png" />
+    <meta property="og:site_name" content="HTML練習" />
+    <title>Arno's Web</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Arno's Web</h1>
+
+
+    </header>
+
+
+    <main id="content">
+ 
+        <form >
+            <p><strong>*為必填項目</strong></p>
+            <table class="nt" border="1">
+                <caption>收件人資料</caption>
+                <tr>
+                    <th><label for="addressee">收件人*</label></th>
+                    <td><input type="text" name="addressee" id="addressee" placeholder="輸入收件人姓名" autofocus required>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="birth">出生日期*</label></th>
+                    <td><input type="date" name="birth" id="birth" required></td>
+                </tr>
+                <tr>
+                    <th>性別*</th>
+                    <td><input type="radio" name="gender" id="male" value="male" required><label for="male">男</label>
+                        <input type="radio" name="gender" id="female" value="female" required><label for="female">女</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>梯次*</th>
+                    <td>
+                        <select name="batch" required>
+                            <option name="batch00">請選擇</option>
+                            <option name="batch01">第1梯次</option>
+                            <option name="batch02">第2梯次</option>
+                            <option name="batch03">第3梯次</option>
+                            <option name="batch04">第4梯次</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>駕照</th>
+                    <td>
+                        <label for="dis01"></label><input type="checkbox" name="
+                            discount" id="dis01">機車
+                        <label for="dis02"></label><input type="checkbox" name="
+                            discount" id="dis02">汽車
+                        <label for="dis03"></label><input type="checkbox" name="
+                            discount" id="dis03">小貨車
+                        <label for="dis04"></label><input type="checkbox" name="
+                            discount" id="dis04">大卡車
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>附件</th>
+                    <td><input type="file" name="appendix"></td>
+                </tr>
+    
+            </table>
+    
+    
+            <table class="nt" border="1">
+                <caption>會員資料</caption>
+                <tr>
+                    <th>會員名字*</th>
+                    <td><input type="text" placeholder="輸入會員姓名" required>※可用暱稱</td>
+                </tr>
+                <tr>
+                    <th>E-mail*</th>
+                    <td><input type="email" placeholder="user001@gmail.com" name="email" required>※請輸入半形文字</td>
+                </tr>
+                <tr>
+                    <th>備註</th>
+                    <td><textarea name="remark" rows="5" cols="40"></textarea></td>
+                </tr>
+            </table>
+            <div class="send">
+                
+                <input type="reset" value="清除重填"></td>
+                <input type="submit" value="送出"></td>
+                
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>
+            <small>
+                Copyright © Arno's Web All Rights Reserved.
+            </small>
+        </p>
+        <p><a href="#top">返回頂層</a></p>
+    </footer>
+
+</body>
+
+</html>

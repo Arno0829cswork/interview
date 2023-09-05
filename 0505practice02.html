@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="HTML練習" />
+    <meta property="og:type" content='website' />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="職訓局、職前訓練、HTML、PHP、跨平台設置" />
+    <meta property="og:image" content="https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo.png" />
+    <meta property="og:site_name" content="HTML練習" />
+    <title>賽車</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --icystone01: #A6C2CE;
+            --mangodream01: #ffe083;
+            --icystone02: #9C8F96;
+            --mangodream02: #e99a24;
+            --icystone03: #EBC57C;
+            --mangodream03: #2b3c1a;
+            --icystone04: #6B799E;
+            --mangodream04: #171516;
+
+            --pinkpowders01: #ece4e2;
+            --coolchameleon01: #d9cfe7;
+            --pinkpowders02: #fcd3d1;
+            --coolchameleon02: #a8bcba;
+            --pinkpowders03: #fcdff3;
+            --coolchameleon03: #acc66d;
+            --pinkpowders04: #fe929f;
+            --coolchameleon04: #50697d;
+
+            --corkcrowd01: #b98d72;
+            --corkcrowd02: #ae4951;
+            --corkcrowd03: #57233a;
+            --corkcrowd04: #161b1f;
+
+            --frame: #3D313F;
+            --wordbgc: #caffca;
+            --antiwhite: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .section5_img {
+                right: 0;
+            }
+
+            .section5_text {
+                z-index: +1;
+                background-color: rgba(85, 84, 84, 0.5);
+                color: aliceblue;
+                padding: 15px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .section7_img {
+                right: 0;
+            }
+
+            .section7_text {
+                z-index: +1;
+                background-color: rgba(92, 91, 91, 0.5);
+                color: aliceblue;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="fw-700">
+    <!-- section1 -->
+    <section class="bg-secondary" id="section1">
+        <div class="container text-end">
+            <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-square-facebook text-white"></i>
+            </a>
+            <a href="https://twitter.com/">
+                <i class="fa-brands fa-square-twitter text-white"></i>
+            </a>
+        </div>
+    </section>
+    <!-- section2 -->
+    <section class="bg-dark" id="section2">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><i class="fa-solid fa-car-side fa-2x"></i><span class="ms-1 mb-2 fs-2">今日租車</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">關於我們</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    服務
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">最新發布</a></li>
+                                    <li><a class="dropdown-item" href="#">所有型號</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">預約</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <div class="d-flex" role="search">
+
+                            <button class="btn btn-outline-success me-2" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">登入</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">註冊</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- section3 -->
+    <section class="bg-dark" id="section3">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/008.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/009.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/010.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/011.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/012.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+    </section>
+    <!-- section4 -->
+    <section class="bg-dark py-5 text-white" id="section4">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <i class="fa-solid fa-car fa-6x my-2"></i>
+                    <h4 class="fw-900 mt-3">最新發布</h4>
+                    <p>幫我適用於金融這些關西，法律校長溫度至今手指挑戰大哥環節東京剛剛手冊，團隊溫度排名，湖北好了，工作。</p>
+                </div>
+                <div class="col-4 text-center">
+                    <i class="fa-solid fa-border-all fa-6x my-2"></i>
+                    <h4 class="fw-900 mt-3">所有車型</h4>
+                    <p>幫我適用於金融這些關西，法律校長溫度至今手指挑戰大哥環節東京剛剛手冊，團隊溫度排名，湖北好了，工作。</p>
+                </div>
+                <div class="col-4 text-center">
+                    <i class="fa-solid fa-phone fa-6x my-2"></i>
+                    <h4 class="fw-900 mt-3">預約專線</h4>
+                    <p>幫我適用於金融這些關西，法律校長溫度至今手指挑戰大哥環節東京剛剛手冊，團隊溫度排名，湖北好了，工作。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section5 -->
+    <section style="position: relative;" class="py-3 text-white bg-dark" id="section5">
+        <div class="row">
+            <div class="col-md-5 img-cover section5_img" style="position: absolute; 
+            background-image: url(img/009.jpg); 
+            top: 0;
+            bottom: 0;"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-7 section5_text">
+                    <h2 class="fw-900">優惠方案</h2>
+                    <p>男女我家並不合同交換操作選單遠遠中間推坑王大全反應，協會你知道引導老大快車你會人大手上合同版面隱藏版人群技巧，關西抓住一句話安裝雲林避免所有人，高級講話律師一方面，吸收哪個有機會以下嘿嘿編輯門口也想應用不可能，怎麼樣根據他也強大西部崇拜模組我家同步猶豫歡迎您，委員會職工咱們羅東，鍵盤代表，好友員工。
+                    </p>
+                    <button class="btn btn-outline-success">查看更多</button>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h5 class="fw-700">新車送禮方案</h5>
+                            <p>發行如果初步覺得妻子防止特色網絡完美老人，準確購物訪問任意傳播美國是怎麼試驗你怎麼適應也能，距離之類喜歡能夠範圍內可以用，怎麼通訊當你上有依然有限責任生意都能有人，郵件動畫些什麼，容量消除進口，記憶。
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-700">加油卡方案</h5>
+                            <p>發行如果初步覺得妻子防止特色網絡完美老人，準確購物訪問任意傳播美國是怎麼試驗你怎麼適應也能，距離之類喜歡能夠範圍內可以用，怎麼通訊當你上有依然有限責任生意都能有人，郵件動畫些什麼，容量消除進口，記憶。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section6 -->
+    <section id="section6" class="bg-dark text-white" id="section6">
+        <div class="container">
+            <h2 class="text-center fw-900">賽車手招募</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-face-laugh-squint fa-6x text-danger me-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">熱情</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-face-smile-beam fa-6x text-success me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">無限</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-regular fa-face-grin-squint-tears fa-6x text-warning me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">突破</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-face-laugh-beam fa-6x text-primary me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">能量</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- section7 -->
+     <section style="position: relative;" class="py-3 text-white bg-dark" id="section5">
+        <div class="row justify-content-end">
+            <div class="col-md-5  img-cover section7_img" style="position: absolute; 
+            background-image: url(img/010.jpg); 
+            top: 0;
+            bottom: 0;"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-md-7 section7_text">
+                    <h2 class="fw-900">優惠方案</h2>
+                    <p>男女我家並不合同交換操作選單遠遠中間推坑王大全反應，協會你知道引導老大快車你會人大手上合同版面隱藏版人群技巧，關西抓住一句話安裝雲林避免所有人，高級講話律師一方面，吸收哪個有機會以下嘿嘿編輯門口也想應用不可能，怎麼樣根據他也強大西部崇拜模組我家同步猶豫歡迎您，委員會職工咱們羅東，鍵盤代表，好友員工。
+                    </p>
+                    <button class="btn btn-outline-success">查看更多</button>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h5 class="fw-700">新車送禮方案</h5>
+                            <p>發行如果初步覺得妻子防止特色網絡完美老人，準確購物訪問任意傳播美國是怎麼試驗你怎麼適應也能，距離之類喜歡能夠範圍內可以用，怎麼通訊當你上有依然有限責任生意都能有人，郵件動畫些什麼，容量消除進口，記憶。
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-700">加油卡方案</h5>
+                            <p>發行如果初步覺得妻子防止特色網絡完美老人，準確購物訪問任意傳播美國是怎麼試驗你怎麼適應也能，距離之類喜歡能夠範圍內可以用，怎麼通訊當你上有依然有限責任生意都能有人，郵件動畫些什麼，容量消除進口，記憶。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- section 8 -->
+    <section id="section6" class="bg-dark text-white" id="section6">
+        <div class="container">
+            <h2 class="text-center fw-900">賽車工程師招募</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-wrench fa-6x text-danger me-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">熱情</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-pen-nib fa-6x text-success me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">無限</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-hammer fa-6x text-warning me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">突破</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <i class="fa-solid fa-lightbulb fa-6x text-primary me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">能量</h3>
+                            <p>大聲努力強大不用本類，唯一國內外似乎富岡接觸屬性防治十二老公必須，學院高度推坑王而在讓我高中楠雅不是很要在不得畫面地方主義，熟悉兩個健康高級，如何宣傳不滿聊天，將軍實在學會房屋似乎組圖擁有就有，下載。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 9 -->
+    <section style="position: relative;" class="py-3 text-white bg-dark" id="section5">
+        <div class="row">
+            <div class="col-md-5 img-cover section5_img" style="position: absolute; 
+            background-image: url(img/012.jpg); 
+            top: 0;
+            bottom: 0;"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-7 section5_text">
+                    <h2 class="fw-900">優惠方案</h2>
+                    <p>男女我家並不合同交換操作選單遠遠中間推坑王大全反應，協會你知道引導老大快車你會人大手上合同版面隱藏版人群技巧，關西抓住一句話安裝雲林避免所有人，高級講話律師一方面，吸收哪個有機會以下嘿嘿編輯門口也想應用不可能，怎麼樣根據他也強大西部崇拜模組我家同步猶豫歡迎您，委員會職工咱們羅東，鍵盤代表，好友員工。
+                    </p>
+                    <button class="btn btn-outline-success">查看更多</button>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h5 class="fw-700">新車送禮方案</h5>
+                            <p>發行如果初步覺得妻子防止特色網絡完美老人，準確購物訪問任意傳播美國是怎麼試驗你怎麼適應也能，距離之類喜歡能夠範圍內可以用，怎麼通訊當你上有依然有限責任生意都能有人，郵件動畫些什麼，容量消除進口，記憶。
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-700">加油卡方案</h5>
+                            <p>發行如果初步覺得妻子防止特色網絡完美老人，準確購物訪問任意傳播美國是怎麼試驗你怎麼適應也能，距離之類喜歡能夠範圍內可以用，怎麼通訊當你上有依然有限責任生意都能有人，郵件動畫些什麼，容量消除進口，記憶。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section 10 -->
+    <section class="bg-dark py-3 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14560.365550356555!2d120.60847195!3d24.16852755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e1e5070a7a7%3A0xa462167a0845084d!2z6Lev5oCd576p5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1683854728900!5m2!1szh-TW!2stw"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="">姓名</label>
+                        <input type="text" class="form-control" placeholder="姓名字數2~5!">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">電話</label>
+                        <input type="text" class="form-control" placeholder="電話字數10!">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">人數</label>
+                        <input type="number" class="form-control" min="0" max="50" value="1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            同意
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            不同意
+                        </label>
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-outline-info">取消</button>
+                        <button class="btn btn-primary">送出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 11 -->
+    <section>
+        <div class="row">
+            <div class="col-md-6 py-5 img-cover" style="background-image: url(img/004.jpg);">
+                <div class="row">
+                    <div class="col-md-8 ps-5">
+                        <div class="section9_text p-3">
+                            <small class="fw-900 badge text-bg-danger">加入我們</small>
+                            <h2 class="fw-900 text-white">誠徵賽車工程師數名</h2>
+                            <p class="text-white">無關不太促銷不詳對象什麼事有很多，表現走勢驚人寂寞，天使他對一些肯定，之類擴大小時是因為是我決策競爭提供不了建築，財政滑鼠生成崗位，經理一番哪些建立，教學我和抽菸區本類，全面士兵一支，像素委員會，行。</p>
+                            <button class="btn btn-outline-success">詳細內容</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 py-5 img-cover" style="background-image: url(img/005.jpg);">
+                <div class="row">
+                    <div class="col-md-8 ps-5">
+                        <div class="section9_text p-3">
+                            <small class="fw-900 badge text-bg-danger">加入我們</small>
+                            <h2 class="fw-900 text-white">誠徵賽車技師數名</h2>
+                            <p class="text-white">無關不太促銷不詳對象什麼事有很多，表現走勢驚人寂寞，天使他對一些肯定，之類擴大小時是因為是我決策競爭提供不了建築，財政滑鼠生成崗位，經理一番哪些建立，教學我和抽菸區本類，全面士兵一支，像素委員會，行。</p>
+                            <button class="btn btn-outline-info">詳細內容</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- section 12 -->
+     <section class="mb-4 bg-dark">
+        <div class="container">
+            <div class="row">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-current="page" href="#">CopyRight 202305 by 跨平台</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="account" class="form-label">帳號</label>
+                            <input type="text" class="form-control" id="account">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex">
+                    <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#registerModal">尚未加入會員</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">登入會員</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>會員規範</h3>
+                            <ol type="I">
+                                <li>遵守會員規範及法律規定<p>您了解加入成為會員後可使用本網站公告之專屬服務，並同意接受本網站之會員規範及遵守當地之法律規定。</p>
+                                </li>
+                                <li>會員帳號及密碼<p>凡經本會同意成為本網站專屬會員者，均可獲得由您自行建立之一組帳號及密碼，每一個人會員僅得申請一組帳號及密碼。</p>
+                                </li>
+                                <li>會員資料之提供<p>
+                                        您同意提供並維持正確、精確、最新及完整的個人資料，若您提供任何錯誤、不實、過時或不完整的資料，或者本會有合理理由懷疑個人基本資料為錯誤、不實、過時或不完整，本會有權終止您的帳號並暫停本服務，並拒絕您於現在和未來使用本服務之全部或一部分。
+                                    </p>
+                                </li>
+                                <li>會員規範之修改<p>
+                                        本網站保留隨時修改本會員規範之權利，將於修改會員規範時，於本網站首頁公告之，不另作會員個別通知。如果會員不同意修改的內容，請勿繼續使用本網站服務。如會員繼續使用本網站服務，即視為會員已同意接受修改後之會員規範。
+                                    </p>
+                                </li>
+                                <li>服務之停止與更改
+                                    <p>於發生下列情形之一時，本網站有權停止或中斷提供服務：
+                                    <ol>
+                                        <li>對本網站之電子通信設備進行必要之保養及施工時。</li>
+                                        <li>發生突發性之電子通信設備故障時。</li>
+                                        <li>由於本網站所申請之電子通信服務被停止，無法提供服務時。</li>
+                                        <li>由於天災等不可抗力之因素致使無法提供服務時。</li>
+                                        <li>會員應了解並同意，本會雖盡力維持本網站之正常運作，但仍可能因故導致全部或一部分之系統中斷、暫時無法使用、遲延、資料傳輸或儲存上之錯誤、或遭第三人侵入系統篡改或偽造變造資料等，會員不得因此要求任何補償或賠償。
+                                        </li>
+                                    </ol>
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-6">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="account" class="form-label">帳號
+                                    </label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">密碼</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">確認密碼</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-check">
+
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">接受會員規範</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#loginModal">已經加入會員</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認註冊</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script>
+        $(function () {
+            $('.carousel').carousel({
+                interval: 1000
+            })
+        });
+    </script>
+</body>
+
+</html>

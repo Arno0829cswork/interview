@@ -1,0 +1,21 @@
+{
+    "cSpell.words": [
+        "agetext",
+        "alphatext",
+        "bloodtype",
+        "bluetext",
+        "colorset",
+        "colortone",
+        "greentext",
+        "icystone",
+        "myblood",
+        "needimg",
+        "needtext",
+        "redtext",
+        "scoretext",
+        "setcolor",
+        "useraccount"
+    ],
+    "editor.guides.bracketPairs": true,
+    "liveServer.settings.port": 5501
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="HTML練習" />
+    <meta property="og:type" content='website' />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="職訓局、職前訓練、HTML、PHP、跨平台設置" />
+    <meta property="og:image" content="https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo.png" />
+    <meta property="og:site_name" content="HTML練習" />
+    <title>HTML練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        :root {
+            --icystone01: #A6C2CE;
+            --mangodream01: #ffe083;
+            --icystone02: #9C8F96;
+            --mangodream02: #e99a24;
+            --icystone03: #EBC57C;
+            --mangodream03: #2b3c1a;
+            --icystone04: #6B799E;
+            --mangodream04: #171516;
+
+            --pinkpowders01: #ece4e2;
+            --coolchameleon01: #d9cfe7;
+            --pinkpowders02: #fcd3d1;
+            --coolchameleon02: #a8bcba;
+            --pinkpowders03: #fcdff3;
+            --coolchameleon03: #acc66d;
+            --pinkpowders04: #fe929f;
+            --coolchameleon04: #50697d;
+
+            --corkcrowd01: #b98d72;
+            --corkcrowd02: #ae4951;
+            --corkcrowd03: #57233a;
+            --corkcrowd04: #161b1f;
+
+            --frame: #3D313F;
+            --wordbgc: #caffca;
+            --antiwhite: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .demo {
+            margin: 20px;
+            padding: 20px;
+            background-color: var(--wordbgc);
+            border: 1px solid var(--frame);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-1">
+                <div class="demo">
+                    <div class="mt-3">
+                        <label for="username01">帳號
+                        </label>
+                        <input type="text" class="form-control" id="username01" name="username01">
+
+                        <div class="mt-3">
+                            <label for="nickname01">暱稱</label>
+                            <input type="text" class="form-control" id="nickname01" name="nickname01">
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="num01">數量</label>
+                            <input type="number" min="1" value="12" class="form-control" id="num01" name="num01">
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="food01">餐點</label>
+                            <input type="text" class="form-control" list="myfood" id="food01" name="food01">
+                            <datalist id="myfood">
+                                <option value="牛肉麵"></option>
+                                <option value="牛肚麵"></option>
+                                <option value="牛雜麵"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="drink01">飲料</label>
+                            <select class="form-select" id="drink01" name="drink01" multiple size="2">
+                                <option value="">--請選擇--</option>
+                                <option value="珍奶">珍奶</option>
+                                <option value="紅茶">紅茶</option>
+                                <option value="可樂">可樂</option>
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <div class="fs-5">偏好:</div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="中式">
+                                <label for="" class="form-check-label">中式</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="美式">
+                                <label for="" class="form-check-label">美式</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="日式">
+                                <label for="" class="form-check-label">日式</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="港式">
+                                <label for="" class="form-check-label">港式</label>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="fs-5">取餐方式:</div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="" name="way" value="內用">
+                                <label for="" class="form-check-label">內用</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="" name="way" value="自取">
+                                <label for="" class="form-check-label">自取</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="" name="way" value="外帶">
+                                <label for="" class="form-check-label">外帶</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="" name="way" value="外送">
+                                <label for="" class="form-check-label">外送</label>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="fs-5">滿意度</div>
+                                <label for="score" class="form-label" id="scoretext"></label>
+                                <input type="range" class="form-range" id="score" name="score" min="0" max="10">
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="fs-5">調色</div>
+                            <label for="red" class="form-label" id="redtext">紅燈</label>
+                            <input type="range" class="form-range" id="red" name="red" min="0" max="255" onchange="setcolor()">
+                            <label for="green" class="form-label" id="greentext">綠燈</label>
+                            <input type="range" class="form-range" id="green" name="green" min="0" max="255" onchange="setcolor()">
+                            <label for="blue" class="form-label" id="bluetext">藍燈</label>
+                            <input type="range" class="form-range" id="blue" name="blue" min="0" max="255" onchange="setcolor()">
+                            <label for="alpha" class="form-label" id="alphatext">透明度</label>
+                            <input type="range" class="form-range" id="alpha" name="alpha" min="0" max="1" step="0.01" onchange="setcolor()">
+                            <div class="colortone" style="width: 150px; height: 150px; border: 2px solid #ccc;"></div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="form-check form-switch">
+                                <input type="checkbox" id="need" name="need" class="form-check-input" role="switch">
+                                <label for="need" class="form-check-label" id="needtext">需付免洗餐具</label>
+                            </div>
+                            <div class="needimg" style="width: 150px; height: 150px; border: 2px solid #ccc;"></div>
+                        </div>
+
+
+
+                        <div class="text-center">
+                            <button class="btn btn-secondary mt-3" id="cancel-btn01">取消</button>
+                            <button class="btn btn-primary mt-3" id="btn01">確認</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="showmsg01" class="demo"></div>
+            </div>
+
+            <div class="col-md-10 offset-1">
+                <div class="demo">
+                    <div class="row align-items-center mt-3">
+                        <div class="col-auto">
+                            <label for="username02" class="form-label">帳號</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="username02" name="username02">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mt-3">
+                        <div class="col-auto">
+                            <label for="nickname02" class="form-label">暱稱</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="nickname02" name="nickname02">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mt-3">
+                        <div class="col-auto">
+                            <label for="num02" class="form-label">數量</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="number" min="1" value="12" class="form-control" id="num02" name="num02">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mt-3">
+                        <div class="col-auto">
+                            <label for="food02" class="form-label">餐點</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="food02" name="food02" list="myfood">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mt-3">
+                        <div class="col-auto">
+                            <label for="drink02">飲料</label>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select" id="drink02" name="drink02">
+                                <option value="">--請選擇--</option>
+                                <option value="珍奶">珍奶</option>
+                                <option value="紅茶">紅茶</option>
+                                <option value="可樂">可樂</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                         <div class="fs-5">偏好:</div> <!--form-check-inline應用 -->
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="中式">
+                            <label for="" class="form-check-label">中式</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="美式">
+                            <label for="" class="form-check-label">美式</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="日式">
+                            <label for="" class="form-check-label">日式</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="" name="foodstyle" value="港式">
+                            <label for="" class="form-check-label">港式</label>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="fs-5">取餐方式:</div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="" name="way" value="內用">
+                            <label for="" class="form-check-label">內用</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="" name="way" value="自取">
+                            <label for="" class="form-check-label">自取</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="" name="way" value="外帶">
+                            <label for="" class="form-check-label">外帶</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="" name="way" value="外送">
+                            <label for="" class="form-check-label">外送</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-secondary mt-3" id="cancel-btn02">取消</button>
+                        <button class="btn btn-primary mt-3" id="btn02">確認</button>
+                    </div>
+                </div>
+                <div id="showmsg02" class="demo"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+
+            $("#btn01").click(function () {
+                console.log($("#username01").val() + $("#nickname01").val() + $("#num01").val());
+
+                var styleArray = [];
+
+                $.each($("input[name='foodstyle']:checked"), function () {
+                    console.log($(this).val());
+                    styleArray.push($(this).val());
+                });
+
+                var wayArray = [];
+
+                $("input[name='way']:checked").each(function () {
+                    console.log($(this).val());
+                    wayArray.push($(this).val());
+                });
+
+                
+                $("#showmsg01").html("<h2>帳號:</h2><p>" + $("#username01").val() + "</p><h2>暱稱:</h2><p>" + $("#nickname01").val() + "</p><h2>數量:</h2><p>" + $("#num01").val() + "</p><h2>餐點:</h2><p>" + $("#food01").val() + "</p><h2>飲料:</h2><p>" + $("#drink01").val() + "</p><h2>偏好:</h2><p>" + styleArray.join("，") + "</p><h2>取餐方式:</h2><p>" + wayArray.join("") + "</p>");
+
+            });
+            $("#cancel-btn01").click(function () {
+                $("#username01").val("");
+                $("#nickname01").val("");
+                $("#num01").val("");
+                $("#showmsg01").html("<h2>帳號:</h2><p></p><h2>暱稱:</h2><p></p><h2>數量:</h2><p></p><h2>餐點:</h2><p></p><h2>飲料:</h2><p></p>");
+            });
+
+            $("#btn02").click(function () {
+                console.log($("#username02").val() + $("#nickname02").val() + $("#num02").val());
+
+                $("#showmsg02").html("<h2>帳號:</h2><p>" + $("#username02").val() + "</p><h2>暱稱:</h2><p>" + $("#nickname02").val() + "</p><h2>數量:</h2><p>" + $("#num02").val() + "</p><h2>餐點:</h2><p>" + $("#food02").val() + "</p><h2>飲料:</h2><p>" + $("#drink02").val() + "</p>");
+            });
+            $("#cancel-btn02").click(function () {
+                $("#username02").val("");
+                $("#nickname02").val("");
+                $("#num02").val("");
+                $("#showmsg02").html("<h2>帳號:</h2><p></p><h2>暱稱:</h2><p></p><h2>數量:</h2><p></p><h2>餐點:</h2><p></p><h2>飲料:</h2><p></p>");
+            });
+
+        });
+
+        $("#need").change(function(){
+                    console.log($(this).is(':checked'));
+                    if($(this).is(':checked')){
+                        $("#needtext").html("需付免洗餐具");
+                        $(".needimg").css("background-color","white");
+                    }else{
+                        $("#needtext").html("不需付免洗餐具");
+                        $(".needimg").css("background-color","black");
+                    }
+                });
+        $("#score").change(function(){
+            console.log($(this).val());
+            $("#scoretext").html("評分:"+$(this).val());
+        });
+
+        $("#red").change(function(){
+            console.log($(this).val());
+            $("#redtext").html("紅:"+$(this).val());
+        });
+        $("#green").change(function(){
+            console.log($(this).val());
+            $("#greentext").html("綠:"+$(this).val());
+        });
+        $("#blue").change(function(){
+            console.log($(this).val());
+            $("#bluetext").html("藍:"+$(this).val());
+        });
+        $("#alpha").change(function(){
+            console.log($(this).val());
+            $("#alphatext").html("透明度:"+$(this).val());
+        });
+        function setcolor(){
+            var red=$("#red").val();
+            var green=$("#green").val();
+            var blue=$("#blue").val();
+            var alpha=$("#alpha").val();
+            console.log(red+green+blue+alpha);
+            var colorset="rgba("+red+","+green+","+blue+","+alpha+")";
+            console.log(colorset);
+            $(".colortone").css("background-color",colorset);
+        };
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="HTML練習" />
+    <meta property="og:type" content='website' />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="職訓局、職前訓練、HTML、PHP、跨平台設置" />
+    <meta property="og:image" content="https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo.png" />
+    <meta property="og:site_name" content="HTML練習" />
+    <title>HTML練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+      @media screen and (max-width:500px) {
+            .table-rwd thead{
+                display: none;
+            }
+            .table-rwd tbody tr{
+                display: block;
+                border: 2px solid var(--corkcrowd04);
+                margin-top: 10px;
+            }
+            .table-rwd tbody tr td{
+                display: block;
+                overflow: hidden;
+            }
+            .table-rwd tbody tr td:before{
+                content: attr(data-th)" : ";
+                color: var(--icystone02);
+                font-size: 20px;
+                font-weight: bolder;
+                display: block;
+                float: left;
+                width: 20%;
+            }
+            .table-rwd tbody tr td span.table-col{
+                display: block;
+                float: left;
+                width: 80%;
+            }
+      }
+    </style>
+</head>
+
+<body>
+    
+        <table class="table table-bordered table-hover table-striped table-rwd">
+            <caption>產品出貨列表</caption>
+            <thead class="table-dark">
+                <tr >
+                    <th>編號</th>
+                    <th>商品</th>
+                    <th>價格</th>
+                    <th>數量</th>
+                    <th>備註</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td data-th="編號"><span class="table-col">001</span></td>
+                    <td data-th="商品"><span class="table-col">美式咖啡</span></td>
+                    <td data-th="價格"><span class="table-col">45</span></td>
+                    <td data-th="數量"><span class="table-col">15</span></td>
+                    <td data-th="備註"><span class="table-col">espresso</span></td>
+                </tr>
+                <tr class="table-secondary">
+                    <td data-th="編號">002</td>
+                    <td data-th="商品">焦糖拿鐵</td>
+                    <td data-th="價格">60</td>
+                    <td data-th="數量">10</td>
+                    <td data-th="備註"></td>
+                </tr>
+                <tr class="table-warning">
+                    <td data-th="編號">003</td>
+                    <td data-th="商品">卡布奇諾</td>
+                    <td data-th="價格">55</td>
+                    <td data-th="數量">5</td>
+                    <td data-th="備註"></td>
+                </tr>
+                <tr class="table-secondary">
+                    <td data-th="編號">004</td>
+                    <td data-th="商品">抹茶拿鐵</td>
+                    <td data-th="價格">65</td>
+                    <td data-th="數量">5</td>
+                    <td data-th="備註"></td>
+                </tr>
+                <tr class="table-warning">
+                    <td data-th="編號">005</td>
+                    <td data-th="商品">義式咖啡</td>
+                    <td data-th="價格">45</td>
+                    <td data-th="數量">5</td>
+                    <td data-th="備註"></td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

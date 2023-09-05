@@ -1,0 +1,42 @@
+* {
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+$themeColor:antiquewhite;
+$headerColor:#666;
+$textColor:white;
+
+body{
+    background-color: $themeColor;
+    font-weight: bolder;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+@import"_header.scss";
+@import"_nav.scss";
+
+@mixin flexbox($direction:column,$fontcolor:brown){
+    margin: 10px;
+    display: flex;
+    
+    flex-direction: $direction;
+    list-style-type: none;
+    a{  
+        color:$fontcolor;
+        text-decoration: none;
+        border: 2px solid $fontcolor;
+        border-radius: 5px;
+        margin: 10px auto;
+        padding: 5px;
+    }
+    
+}
+
+.link01{
+    @include flexbox(row,brown ); 
+}
+.link02{
+    @include flexbox(column,hotpink );
+}
